@@ -1,9 +1,10 @@
-let express = require('express');
-let bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
 // pg setup
-let pg = require('pg');
-let format = require('pg-format');
+const pg = require('pg');
+const format = require('pg-format');
 let PGUSER = 'www-data';
 let PGDATABASE = 'blowoffsteam';
 
@@ -26,6 +27,10 @@ let app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+//  static files
+app.use(express.static(path.resolve(__dirname, 'client')));
+app.use(express.static(path.resolve(__dirname, 'node_modules')));
 
 // api routes
 app.get('/', function(req, res){

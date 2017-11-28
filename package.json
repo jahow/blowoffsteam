@@ -4,10 +4,22 @@
   "description": "let it gooooo",
   "main": "server.js",
   "author": "jahow",
+  "scripts": {
+    "start": "npm run build; node server.js",
+    "start-dev": "nodemon server.js",
+    "build": "webpack -p",
+    "build-dev": "webpack -wd"
+  },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "pg": "^7.4.0",
-    "pg-format": "^1.0.4"
+    "pg-format": "^1.0.4",
+    "webpack": "^3.8.1",
+    "webpack-livereload-plugin": "^1.0.0"
   }
 }
