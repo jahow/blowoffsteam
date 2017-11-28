@@ -1,0 +1,13 @@
+{
+  "name": "blowoffsteam",
+  "version": "1.0.0",
+  "description": "let it gooooo",
+  "main": "server.js",
+  "author": "jahow",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pg": "^7.4.0",
+    "pg-format": "^1.0.4"
+  }
+}
